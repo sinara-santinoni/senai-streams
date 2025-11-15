@@ -1,18 +1,50 @@
 import { Routes } from '@angular/router';
 
-import { ListaContents } from './components/lista-contents/lista-contents';
-import { ListaCategoriasComponent } from './components/lista-categorias/lista-categorias';
+import { ListaContentsComponent } from './components/lista-contents/lista-contents';
 import { DetalhesContentComponent } from './components/detalhes-content/detalhes-content';
+import { ListaCategoriasComponent } from './components/lista-categorias/lista-categorias';
 import { AvaliacoesComponent } from './components/avaliacoes/avaliacoes';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/contents', pathMatch: 'full' },
+  {
+    path: '',
+    redirectTo: '/contents',
+    pathMatch: 'full',
+  },
 
-  { path: 'contents', component: ListaContents },
+  // Início -> mostra tudo
+  {
+    path: 'contents',
+    component: ListaContentsComponent,
+    data: { tipo: null }, // sem filtro
+  },
 
-  { path: 'categories/:id', component: ListaCategoriasComponent },
+  // FILMES -> tipo "movie" (minúsculo, igual ao JSON)
+  {
+    path: 'filmes',
+    component: ListaContentsComponent,
+    data: { tipo: 'movie' },
+  },
 
-  { path: 'content/:id', component: DetalhesContentComponent },
+  // SÉRIES -> vamos assumir tipo "series"
+  {
+    path: 'series',
+    component: ListaContentsComponent,
+    data: { tipo: 'series' },
+  },
 
-  { path: 'reviews/:id', component: AvaliacoesComponent },
+  {
+    path: 'content/:id',
+    component: DetalhesContentComponent,
+  },
+
+  {
+    path: 'categorias/:id',
+    component: ListaCategoriasComponent,
+  },
+
+  {
+    path: 'reviews/:id',
+    component: AvaliacoesComponent,
+  },
 ];
