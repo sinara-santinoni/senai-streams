@@ -31,30 +31,6 @@ O resultado é uma plataforma visualmente agradável e funcional, simulando uma 
 
 ---
 
-## 📂 Estrutura do Projeto
-
-src/
-├── app/
-│ ├── components/
-│ │ ├── avaliacoes/
-│ │ ├── detalhes-content/
-│ │ ├── lista-categorias/
-│ │ └── lista-contents/
-│ ├── models/
-│ ├── services/
-│ ├── app.html
-│ ├── app.ts
-│ ├── app.routes.ts
-│ └── app.scss
-├── assets/
-├── index.html
-├── main.ts
-└── styles.scss
-
-
-
-
----
 
 ## 🧭 Funcionalidades
 
@@ -84,8 +60,4 @@ src/
 
 ---
 
-## ▶️ Como Rodar o Projeto
 
-### 1. Clone o repositório
-```bash
-git clone https://github.com/sinara-santinoni/senai-streams.git
