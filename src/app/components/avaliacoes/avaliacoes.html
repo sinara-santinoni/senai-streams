@@ -1,0 +1,64 @@
+<div class="container">
+  <h1>Avaliações</h1>
+
+  <div class="new-review-form">
+    <h2>Deixe sua avaliação</h2>
+
+    <form (ngSubmit)="submitReview()">
+      <div class="form-group">
+        <label>Seu nome:</label>
+        <input type="text" [(ngModel)]="newReview.authorName" name="authorName" required>
+      </div>
+
+      <div class="form-group">
+        <label>Nota (1 a 5):</label>
+        <select [(ngModel)]="newReview.rating" name="rating">
+          <option [value]="1">⭐ (1)</option>
+          <option [value]="2">⭐⭐ (2)</option>
+          <option [value]="3">⭐⭐⭐ (3)</option>
+          <option [value]="4">⭐⭐⭐⭐ (4)</option>
+          <option [value]="5">⭐⭐⭐⭐⭐ (5)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Título da avaliação:</label>
+        <input type="text" [(ngModel)]="newReview.title" name="title" required>
+      </div>
+
+      <div class="form-group">
+        <label>Comentário:</label>
+        <textarea [(ngModel)]="newReview.comment" name="comment" rows="4" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Enviar avaliação</button>
+    </form>
+  </div>
+
+  <div *ngIf="loading" class="loading">
+    Carregando avaliações...
+  </div>
+
+  <div class="reviews-list" *ngIf="!loading">
+    <h2>Todas as avaliações ({{ reviews.length }})</h2>
+
+    <div class="review-card" *ngFor="let review of reviews">
+      <div class="review-header">
+        <img [src]="review.authorAvatar" [alt]="review.authorName" class="avatar">
+        <div class="review-info">
+          <h3>{{ review.authorName }}</h3>
+          <div class="stars">
+            <span *ngFor="let star of getStars(review.rating)">{{ star }}</span>
+          </div>
+        </div>
+      </div>
+
+      <h4>{{ review.title }}</h4>
+      <p>{{ review.comment }}</p>
+    </div>
+
+    <div *ngIf="reviews.length === 0" class="no-reviews">
+      Ainda não há avaliações. Seja o primeiro a avaliar!
+    </div>
+  </div>
+</div>
