@@ -4,6 +4,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ApiService } from '../../services/api.service';
 import { Content } from '../../models/content.model';
 
+
 @Component({
   selector: 'app-lista-categorias',
   standalone: true,
