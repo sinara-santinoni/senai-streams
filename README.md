@@ -1,59 +1,136 @@
-# SenaiStreams
+🎬 SENAI Streams
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
+Aplicação web inspirada em plataformas de streaming, construída em Angular, com design moderno, rotas, listagem de filmes e séries, filtros e página de detalhes.
 
-## Development server
+📌 Sobre o Projeto
 
-To start a local development server, run:
+O SENAI Streams é um projeto front-end desenvolvido para estudo e prática de Angular.
+Ele simula uma plataforma de streaming, exibindo:
 
-```bash
+Destaques da semana
+
+Lista de conteúdos (filmes e séries)
+
+Filtro por categorias
+
+Página de detalhes do conteúdo
+
+Listagem de avaliações
+
+Componentes reutilizáveis
+
+Navegação completa via Angular Router
+
+🚀 Tecnologias Utilizadas
+
+Angular 17+
+
+TypeScript
+
+SCSS
+
+HTML5
+
+RxJS
+
+Angular Router
+
+API Fake interna / dados mockados
+
+Git & GitHub
+
+📂 Estrutura do Projeto
+src/
+ ├── app/
+ │   ├── components/
+ │   │   ├── avaliacoes/
+ │   │   ├── detalhes-content/
+ │   │   ├── lista-categorias/
+ │   │   └── lista-contents/
+ │   ├── models/
+ │   ├── services/
+ │   ├── app.html
+ │   ├── app.ts
+ │   ├── app.routes.ts
+ │   └── app.scss
+ ├── assets/
+ ├── index.html
+ ├── main.ts
+ └── styles.scss
+
+🧭 Funcionalidades
+✔️ 1. Tela Inicial (Home)
+
+Banner principal com destaque
+
+Botão “Assistir” e “Mais informações”
+
+Seção Em Alta listando conteúdos
+
+✔️ 2. Listagem de Filmes e Séries
+
+Cards responsivos
+
+Imagem, título, ano e nota
+
+Filtro automático baseado no tipo
+
+✔️ 3. Página de Detalhes
+
+Banner interno
+
+Informações detalhadas
+
+Direção, duração, descrição etc.
+
+✔️ 4. Menu de Navegação
+
+Início
+
+Filmes
+
+Séries
+
+Estado ativo destacado
+
+✔️ 5. Componentização total
+
+Cada parte da interface é um componente Angular separado.
+
+▶️ Como Rodar o Projeto
+1. Clone o repositório
+git clone https://github.com/sinara-santinoni/senai-streams.git
+
+2. Acesse a pasta
+cd senai-streams
+
+3. Instale as dependências
+npm install
+
+4. Rode o servidor
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+A aplicação ficará disponível em:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+👉 http://localhost:4200/
 
-```bash
-ng generate component component-name
-```
+🖥️ Demonstração (Screenshots)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+(adicione as imagens depois no GitHub, se quiser posso gerar a seção com imagens também)
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
+📦 Build para Produção
 ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+Os arquivos finais ficarão em:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+dist/senai-streams/
 
-```bash
-ng test
-```
+👩‍💻 Desenvolvido por
 
-## Running end-to-end tests
+Sinara Santinoni (Duda)
+📌 Front-End Developer
+📧 sinarassantinoni@gmail.com
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🔗 GitHub: https://github.com/sinara-santinoni
